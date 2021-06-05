@@ -1,0 +1,68 @@
+header {
+    position: relative;
+    display: grid;
+    grid-template: 1fr / 1fr 2fr 1fr;
+    grid-template-areas: "none logo ham";
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/bgg.jpg);
+    background-position: 50% 100%;
+    object-fit: contain;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    // margin-bottom: 10vh;
+
+
+    h1 {
+        display: block;
+        align-self: center;
+        letter-spacing: 6rem;
+        text-align: center;
+        grid-area: logo;
+        color: white;
+        text-transform: uppercase;
+        font-size: 10rem;
+        font-weight: 600;
+        width: 100%;
+        text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
+    }
+
+    i.fa-bars {
+        position: fixed;
+        top: 5%;
+        right: 5%;
+        grid-area: ham;
+        color: white;
+        font-size: 4rem;
+        cursor: pointer;
+    }
+
+    a {
+        position: absolute;
+        top: 85%;
+        right: 50%;
+        grid-area: logo;
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: $secondaryPinkColor;
+        }
+
+        &:hover i.drop {
+            color: white;
+        }
+
+        i.drop {
+            color: black;
+            font-size: 3rem;
+            line-height: 80px;
+
+        }
+    }
+}
