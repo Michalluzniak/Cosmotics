@@ -1,0 +1,106 @@
+div.side__menu__bg {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 4;
+    display: none;
+    transition: .3s;
+
+}
+
+div.side__menu {
+    position: fixed;
+    top: 0;
+    right: -30%;
+    height: 100%;
+    width: 20%;
+    // background-image: url(../images/pexels-frank-cone-3279307.jpg);
+    // background-size: cover;
+    background-color: $primaryBlueColor;
+    z-index: 5;
+    border-left: 1px solid white;
+    transition: .5s;
+    overflow: hidden;
+
+    div.side__menu__header {
+        position: absolute;
+        // top: 30px;
+        width: 100%;
+        height: 122px;
+        background-color: transparent;
+        border-left: none;
+        border-right: none;
+
+
+        h2 {
+            color: white;
+            font-size: 3rem;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 122px;
+            font-weight: 600;
+            text-shadow: -1px -1px 2px #000,
+                1px -1px 2px #000, -1.5px 1.5px 2px #000, 1px 1px 2px #000;
+        }
+    }
+
+    // .bg__sideDrop__fill {
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 30px;
+    //     background-color: transparent;
+    // }
+
+    // .underline {
+    //     border-bottom: 1px dotted #c03;
+    //     width: 100%;
+    //     display: block;
+    // }
+
+    ul {
+        @include flexCenter(column);
+        align-items: center;
+        list-style: none;
+        width: 100%;
+        height: 100%;
+
+        li {
+            width: 100%;
+            text-align: center;
+
+            a {
+                display: block;
+                color: white;
+                font-size: 2rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                margin-bottom: 100px;
+                // background-color: $secondaryPinkColor;
+                // border-bottom: 2px solid white;
+
+
+
+                &:hover {
+                    color: rgb(150, 150, 150);
+                }
+            }
+        }
+
+    }
+
+
+}
+
+
+
+
+
+div.side__menu.active {
+    right: 0;
+}
+
+div.side__menu__bg.active {
+    display: block;
+}
