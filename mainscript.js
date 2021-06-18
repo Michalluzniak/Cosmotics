@@ -9,6 +9,7 @@ $(document).ready(function () {
     //logo and description animation
 
     $('.logo').textyle({
+
         easing: 'linear',
         duration: 2000,
         delay: 100
