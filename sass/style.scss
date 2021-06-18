@@ -1,0 +1,457 @@
+ @import '_variables';
+
+ @mixin flexCenter($direction) {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: $direction;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Unica one';
+ }
+
+ ::-webkit-scrollbar {
+     display: none;
+ }
+
+
+ @import '_header';
+ @import '_side-menu';
+
+
+ div.description {
+     display: flex;
+     margin: 0 auto 4px auto;
+     width: 100%;
+     height: 10vh;
+     background-color: $primaryBlueColor;
+     border-top: 4px solid white;
+ }
+
+
+
+ div.categories__description {
+     @include flexCenter(row);
+     width: 20%;
+     height: 100%;
+     border-right: 4px solid white;
+ }
+
+ div.products__description {
+     @include flexCenter(row);
+     width: 80%;
+     height: 100%;
+     text-align: center;
+
+ }
+
+ div.description h2 {
+     color: white;
+     text-transform: uppercase;
+     font-size: 3rem;
+     font-weight: 400;
+     letter-spacing: .3rem;
+ }
+
+ // NAVIGATION
+ nav.products {
+     display: flex;
+     margin: 0 auto;
+     width: 100%;
+     height: 90vh;
+     background-image: url(../images/pexels-lisa-1182338.jpg);
+     background-position: 50% 80%;
+     background-size: cover;
+     overflow: hidden;
+     margin-bottom: 4px;
+
+
+
+     ul {
+         width: 20%;
+         height: 100%;
+         border-right: 4px solid white;
+         list-style: none;
+
+         li {
+             position: relative;
+             width: 100%;
+             border-bottom: 4px solid white;
+             cursor: pointer;
+
+
+
+
+             div.sub-menu {
+                 align-items: center;
+                 width: 100%;
+                 height: 50%;
+                 border-top: 4px solid white;
+                 display: none;
+
+                 a {
+                     font-size: 1.2em;
+                     width: 100%;
+                     height: 25%;
+                     background-color: $primaryBlueColor;
+
+                     &:hover {
+                         background-color: #6D6C5A;
+                     }
+                 }
+             }
+
+             a {
+                 position: relative;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 height: 100%;
+                 width: 100%;
+                 color: white;
+                 text-align: center;
+                 text-decoration: none;
+                 text-transform: uppercase;
+                 font-size: 2rem;
+                 vertical-align: middle;
+                 line-height: 320%;
+
+                 &:hover i {
+                     font-size: 2.5rem;
+                 }
+
+
+                 i {
+                     position: absolute;
+                     left: 88%;
+                     top: 50%;
+                     transform: translate(-50%, -50%);
+                     font-size: 2rem;
+                     color: white;
+
+                     &.rotate {
+                         transform: translate(-50%, -50%) rotate(180deg);
+                     }
+                 }
+             }
+         }
+
+         div.adcat {
+             display: grid;
+             grid-template: 1fr 20% 20% 1fr / 1fr 80% 1fr;
+             height: 25%;
+             width: 100%;
+             align-items: center;
+
+             .searchbox {
+                 display: flex;
+                 position: relative;
+                 grid-area: 3 / 2 / 4 / 3;
+                 background-color: #fff;
+                 height: 35px;
+                 padding-left: 10px;
+
+                 input.search-txt {
+                     font-size: 1.1rem;
+                     width: 100%;
+                     border: none;
+                     border-right: 2px solid $primaryBlueColor;
+                     background: none;
+                     outline: none;
+                     width: 80%;
+                     height: 100%
+                 }
+
+                 a.search-btn {
+                     display: block;
+                     width: 20%;
+                     height: 100%;
+                     text-align: center;
+                     background-color: $secondaryPinkColor;
+
+                     i {
+                         line-height: 35px;
+                         color: white;
+                         font-size: 1.2rem;
+                     }
+                 }
+             }
+
+             h2 {
+                 grid-area: 2 / 2 / 3 / 3;
+                 text-align: center;
+                 text-transform: uppercase;
+                 color: white;
+                 letter-spacing: 10px;
+                 font-weight: 300;
+             }
+         }
+     }
+ }
+
+
+ //NAVIGATION END
+
+ //PRODUCTS NEXT TO NAV
+ div.products__container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 80%;
+     max-height: 100%;
+ }
+
+ div.products__list {
+     display: grid;
+     grid-template: 10% 2.5% 1fr 2.5% 10% 2.5% 1fr 2.5% 10%/ 1fr 10% 1fr 10% 1fr;
+     grid-template-areas:
+         "bar bar bar bar bar "
+         "space space space space space "
+         "image1 space2 image2 space3 image3 "
+         "space4 space4 space4 space4 space4 "
+         "bar2 bar2 bar2 bar2 bar2 "
+         "space5 space5 space5 space5 space5 "
+         "image4 space6 image5 space7 image6 "
+         "space8 space8 space8 space8 space8 "
+         "bar3 bar3 bar3 bar3 bar3 ";
+     width: 90%;
+     height: 95%;
+ }
+
+ div.type__of__products {
+     @include flexCenter(row);
+     width: 100%;
+     height: 100%;
+     grid-area: bar;
+     background-color: $primaryBlueColor;
+
+     h2 {
+         color: white;
+         font-size: 3rem;
+         text-transform: uppercase;
+         font-weight: 300;
+     }
+ }
+
+ div.allProducts {
+     background-image: url(../images/shampoo.jpg);
+     background-position: center;
+     background-size: cover;
+ }
+
+ div.productOne {
+     width: 100%;
+     height: 100%;
+     grid-area: image1;
+
+ }
+
+ .allProducts {
+     position: relative;
+     overflow: hidden;
+
+
+     div.hov {
+         position: absolute;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.8);
+         visibility: visible;
+         color: white;
+         transition: .3s;
+
+         i.open {
+             position: absolute;
+             top: 20%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             font-size: 2rem;
+
+             &:hover+i.closed {
+                 display: block;
+             }
+         }
+
+         i.closed {
+             position: absolute;
+             top: 20%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             font-size: 2rem;
+             display: none;
+         }
+     }
+
+
+     &:hover div.hov {
+         left: 0;
+         visibility: visible;
+     }
+ }
+
+
+ div.productTwo {
+     width: 100%;
+     height: 100%;
+     grid-area: image2;
+ }
+
+
+ div.productThree {
+     width: 100%;
+     height: 100%;
+     grid-area: image3;
+ }
+
+
+ div.products__info1 {
+     display: grid;
+     grid-template: 1fr / 1fr 10% 1fr 10% 1fr;
+     grid-template-areas: "first sp second sp2 third";
+     width: 100%;
+     height: 100%;
+     grid-area: bar2;
+     background-color: $primaryBlueColor;
+
+
+
+     p {
+         color: white;
+         font-size: 1.5rem;
+         text-transform: uppercase;
+     }
+
+     .price h2 {
+         color: white;
+         font-size: 2rem;
+         font-weight: 400;
+         text-transform: uppercase;
+     }
+
+     .price1 {
+         @include flexCenter(column);
+         grid-area: first;
+
+     }
+ }
+
+ .price2 {
+     @include flexCenter(column);
+     grid-area: second;
+     text-align: center;
+
+
+ }
+
+ .price3 {
+     @include flexCenter(column);
+     grid-area: third;
+     text-align: center;
+ }
+
+
+ div.productFour {
+     width: 100%;
+     height: 100%;
+     grid-area: image4;
+ }
+
+ div.productFive {
+     width: 100%;
+     height: 100%;
+     grid-area: image5;
+ }
+
+ div.productSix {
+     width: 100%;
+     height: 100%;
+     grid-area: image6;
+ }
+
+ div.products__info2 {
+     display: grid;
+     grid-template: 1fr / 1fr 10% 1fr 10% 1fr;
+     grid-template-areas: "first sp second sp2 third";
+     width: 100%;
+     height: 100%;
+     grid-area: bar3;
+     background-color: $primaryBlueColor;
+
+     .price h2 {
+         color: white;
+         font-size: 2rem;
+         font-weight: 400;
+         text-transform: uppercase;
+     }
+
+     p {
+         color: white;
+         font-size: 1.5rem;
+         text-transform: uppercase;
+     }
+
+
+     .price4 {
+         @include flexCenter(column);
+         grid-area: first;
+     }
+
+
+     .price5 {
+         @include flexCenter(column);
+         grid-area: second;
+     }
+
+     .price6 {
+         @include flexCenter(column);
+         grid-area: third;
+     }
+ }
+
+ //PRODUCTS NEXT TO NAV END
+
+ .logo span {
+     display: inline-block;
+     width: 175px;
+     height: 125px;
+     text-align: center;
+     opacity: 0;
+     position: relative;
+     //  padding: 0 3rem 0 3rem;
+ }
+
+ .logo__description {
+     opacity: 0;
+ }
+
+ .logo__description span {
+     opacity: 0;
+ }
+
+
+
+ div.edge-space {
+     height: 60vh;
+     width: 100%;
+     background-color: #000;
+     background-size: cover;
+     //  border-bottom: 4px solid $secondaryPinkColor;
+     //  border-top: 4px solid $secondaryPinkColor;
+ }
+
+
+ //FOOTER 
+
+ footer {
+     height: 40vh;
+     width: 100%;
+     margin-top: 4px;
+     background-image: url(../images/bgg.jpg);
+     background-position: 50% 100%;
+ }
