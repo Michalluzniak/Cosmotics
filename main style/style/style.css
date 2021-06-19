@@ -31,7 +31,6 @@ header h1 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  line-height: 125px;
   text-align: center;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -354,7 +353,6 @@ nav.products ul li a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 2rem;
-  vertical-align: middle;
   line-height: 320%;
 }
 
@@ -792,7 +790,7 @@ div.products__info2 .price6 {
 div.edge-space {
   height: 60vh;
   width: 100%;
-  background-color: #000;
+  background-color: transparent;
   background-size: cover;
 }
 

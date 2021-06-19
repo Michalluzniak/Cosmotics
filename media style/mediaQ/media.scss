@@ -1,5 +1,450 @@
-@media (max-width: 200px) {
-    header {
-        padding: 0;
+$primaryBlueColor:#0B1326;
+$secondaryPinkColor: #933F4F;
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@media (min-width: 320px) and (orientation: portrait) {
+
+
+    @mixin md-icon-size($size: 24px) {
+        font-size: $size;
+        height: $size;
+        width: $size;
+        line-height: $size;
     }
+
+    header {
+        background-size: cover;
+        background-position: 40%;
+
+
+
+        h1 {
+            align-self: flex-start;
+            margin-top: 40%;
+            font-size: 4em;
+            text-shadow: -1.5px -1.5px 2px #111, 1.5px -1.5px 2px #111, -1.5px 1.5px 2px #111, 1.5px 1.5px 2px #111;
+
+        }
+
+        p.logo__description {
+            font-size: 1.5em;
+            top: 50%;
+            letter-spacing: 0.2em;
+        }
+
+        a.scroll__arrow {
+            top: 80%;
+            width: 65px;
+            height: 65px;
+        }
+
+        div.toggle__menu {
+            top: 35px;
+            right: 35px;
+            height: 35px;
+            width: 35px;
+        }
+
+        i.fas-menu {
+            @include md-icon-size(35px);
+            text-shadow: -1px -1px 1px #000,
+                1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+        }
+    }
+
+    // side menu
+    div.side__menu__bg {
+        width: 0%;
+    }
+
+    div.side__menu {
+        right: -100%;
+        width: 100%;
+        border-left: none;
+
+        div.side__menu__header {
+            height: 70px;
+            border-bottom: 1px solid silver;
+
+            h2 {
+                line-height: 70px;
+            }
+
+        }
+
+        ul {
+
+            li {
+                @include flexCenter(column);
+                width: 100%;
+                background-color: $primaryBlueColor;
+                height: 18%;
+                text-align: none;
+
+                &:last-of-type {
+                    border-bottom: 1px solid silver;
+                }
+
+                a {
+                    display: inline-block;
+                    font-size: 1.5rem;
+                    margin-bottom: 0px;
+
+                }
+            }
+
+        }
+    }
+
+    // products 
+
+    div.categories__description {
+        position: absolute;
+        top: 200vh;
+        left: 0;
+        width: 100%;
+        height: 10vh;
+        background-color: $primaryBlueColor;
+        border-right: none;
+        border-bottom: 4px solid white;
+        border-top: 4px solid white;
+        z-index: 1;
+    }
+
+    div.products__description {
+        @include flexCenter(row);
+        width: 100%;
+    }
+
+    div.description h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: .4rem;
+    }
+
+    //NAV
+    nav.products {
+        position: relative;
+        overflow: visible;
+
+        ul {
+            position: absolute;
+            top: 110%;
+            left: 0;
+            width: 100%;
+            height: 90vh;
+            border-right: none;
+            border-left: none;
+            overflow: hidden;
+            margin-bottom: 50vh;
+
+            li {
+
+                border-bottom: 2px solid white;
+
+                div.sub-menu {
+                    border-top: 2px solid white;
+                }
+
+                a {
+                    font-size: 1.8rem;
+                    line-height: 230%;
+
+                    &:hover i {
+                        font-size: 1.5rem;
+                    }
+
+
+                    i {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            div.adcat {
+
+
+                .searchbox {
+                    height: 28px;
+
+                    input.search-txt {
+                        font-size: 1rem;
+                    }
+
+                    a.search-btn {
+                        display: block;
+                        width: 20%;
+                        height: 100%;
+                        text-align: center;
+                        background-color: $secondaryPinkColor;
+
+                        i {
+                            line-height: 28px;
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+
+                h2 {
+                    grid-area: 2 / 2 / 3 / 3;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: white;
+                    letter-spacing: 4px;
+                    font-weight: 300;
+
+                }
+            }
+        }
+    }
+
+    //Products next to nav
+
+    div.products__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    div.products__list {
+        display: grid;
+        grid-template: 10% 2.5% 1fr 2.5% 10% 2.5% 1fr 2.5% 10%/ 1fr 5% 1fr;
+        grid-template-areas:
+            "bar bar bar  "
+            "space space space  "
+            "image1 space2 image2  "
+            "space4 space4 space4  "
+            "bar2 bar2 bar2  "
+            "space5 space5 space5  "
+            "image4 space6 image5  "
+            "space8 space8 space8  "
+            "bar3 bar3 bar3  ";
+        row-gap: 5px;
+        column-gap: 5px;
+        width: 90%;
+        height: 95%;
+    }
+
+    div.type__of__products {
+        @include flexCenter(row);
+        width: 100%;
+        height: 100%;
+        grid-area: bar;
+        background-color: $primaryBlueColor;
+
+        h2 {
+            color: white;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+    }
+
+    div.allProducts {
+        background-image: url(../../images/shampoo.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    div.productOne {
+        width: 100%;
+        height: 100%;
+        grid-area: image1;
+
+    }
+
+    .allProducts {
+        position: relative;
+        overflow: hidden;
+
+
+        div.hov {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            visibility: visible;
+            color: white;
+            transition: .3s;
+
+            i.open {
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 2rem;
+
+                &:hover+i.closed {
+                    display: block;
+                }
+            }
+
+            i.closed {
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 2rem;
+                display: none;
+            }
+        }
+
+
+        &:hover div.hov {
+            left: 0;
+            visibility: visible;
+        }
+    }
+
+
+    div.productTwo {
+        width: 100%;
+        height: 100%;
+        grid-area: image2;
+    }
+
+
+    div.productThree {
+        width: 100%;
+        height: 100%;
+        grid-area: image3;
+    }
+
+
+    div.products__info1 {
+        display: grid;
+        grid-template: 1fr / 1fr 10% 1fr;
+        grid-template-areas: "first sp second sp2 third";
+        width: 100%;
+        height: 100%;
+        grid-area: bar2;
+        background-color: $primaryBlueColor;
+
+
+
+        p {
+            color: white;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .price h2 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .price1 {
+            @include flexCenter(column);
+            grid-area: first;
+
+        }
+    }
+
+    .price2 {
+        @include flexCenter(column);
+        grid-area: second;
+        text-align: center;
+
+
+    }
+
+    .price3 {
+        display: none
+    }
+
+
+    div.productFour {
+        width: 100%;
+        height: 100%;
+        grid-area: image4;
+    }
+
+    div.productFive {
+        width: 100%;
+        height: 100%;
+        grid-area: image5;
+    }
+
+    div.productSix {
+        width: 100%;
+        height: 100%;
+        grid-area: image6;
+    }
+
+    div.products__info2 {
+        display: grid;
+        grid-template: 1fr / 1fr 10% 1fr;
+        grid-template-areas: "first sp second sp2 third";
+        width: 100%;
+        height: 100%;
+        grid-area: bar3;
+        background-color: $primaryBlueColor;
+
+        .price h2 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: white;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+
+        .price4 {
+            @include flexCenter(column);
+            grid-area: first;
+        }
+
+
+        .price5 {
+            @include flexCenter(column);
+            grid-area: second;
+        }
+
+        .price6 {
+            display: none;
+        }
+    }
+
+    //PRODUCTS NEXT TO NAV END
+
+
+
+    div.edge-space {
+        height: 100vh;
+        width: 100%;
+        background-color: $primaryBlueColor;
+        background-size: cover;
+        //  border-bottom: 4px solid $secondaryPinkColor;
+        //  border-top: 4px solid $secondaryPinkColor;
+    }
+
+
+
+
+
+
+    .logo span {
+        display: inline;
+        width: 100%;
+        padding: 0 3px 0 3px;
+        //  padding: 0 3rem 0 3rem;
+    }
+
 }
