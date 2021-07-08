@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -14,11 +14,20 @@
 
 <body>
     <header>
+        <nav>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Top Products</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
         <h1 class="logo">cosmotics</h1>
         <p class="logo__description">we believe in quality</p>
         <div class="toggle__menu">
-            <i class="fas fas-menu fa-bars"></i>
-            <i class="fas fas-menu fa-times"></i>
+            <span id="hamFirstLine"></span>
+            <span id="hamSecondLine"></span>
+            <span id="hamThirdLine"></span>
         </div>
         <a class="scroll__arrow"><i class="fas fa-chevron-down arrow"></i></a>
     </header>
@@ -43,8 +52,18 @@
                 <h2>products</h2>
             </div>
         </div>
+        <!-- Products list Navigation and Products list -->
         <nav class="products">
             <ul>
+                <div class="search__container">
+                    <h2>Search item:</h2>
+                    <div class="searchbox">
+                        <input class="search-txt" type="text" placeholder="Type to search">
+                        <a href="#" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                </div>
                 <li>
                     <a class="nav-btn">hair<i class=" fas fa-chevron-down drop"></i></a>
                     <div class="sub-menu">
@@ -99,16 +118,8 @@
                         <a class="sub-item">lorem</a>
                     </div>
                 </li>
-                <div class="adcat">
-                    <h2>Search item:</h2>
-                    <div class="searchbox">
-                        <input class="search-txt" type="text" placeholder="Type to search">
-                        <a href="#" class="search-btn">
-                            <i class="fas fa-search"></i>
-                        </a>
-                    </div>
-                </div>
             </ul>
+            <!-- Products list -->
             <div class=" products__container">
                 <div class="products__list">
                     <div class="type__of__products">
@@ -116,25 +127,56 @@
                     </div>
                     <div class="productOne allProducts">
                         <div class="hov">
-                            <i class="far fa-heart open"></i>
-                            <i class="fas fa-heart closed"></i>
-                            <p>favorite</p>
+                            <div class="hov__heart__icon__container">
+                                <i class="far fa-heart open"></i>
+                                <i class="fas fa-heart closed"></i>
+                                <p>favorite</p>
+                            </div>
+                            <div class="buy__now__container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Buy Now!</p>
+                            </div>
+                            <div class="see__product">
+                                <i class="fas fa-search"></i>
+                                <p>Details</p>
+                            </div>
                         </div>
                     </div>
                     <div class="productTwo allProducts">
                         <div class="hov">
-                            <i class="far fa-heart open"></i>
-                            <i class="fas fa-heart closed"></i>
-                            <p>favorite</p>
+                            <div class="hov__heart__icon__container">
+                                <i class="far fa-heart open"></i>
+                                <i class="fas fa-heart closed"></i>
+                                <p>favorite</p>
+                            </div>
+                            <div class="buy__now__container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Buy Now!</p>
+                            </div>
+                            <div class="see__product">
+                                <i class="fas fa-search"></i>
+                                <p>Details</p>
+                            </div>
                         </div>
                     </div>
                     <div class="productThree allProducts">
                         <div class="hov">
-                            <i class="far fa-heart"></i>
-                            <p>favorite</p>
+                            <div class="hov__heart__icon__container">
+                                <i class="far fa-heart open"></i>
+                                <i class="fas fa-heart closed"></i>
+                                <p>favorite</p>
+                            </div>
+                            <div class="buy__now__container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Buy Now!</p>
+                            </div>
+                            <div class="see__product">
+                                <i class="fas fa-search"></i>
+                                <p>Details</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="products__info1">
+                    <div class="products__info1 infoAll">
                         <div class="price1 price">
                             <h2>Shampoo</h2>
                             <p>16.99zł</p>
@@ -150,29 +192,130 @@
                     </div>
                     <div class="productFour allProducts">
                         <div class="hov">
-                            <h3>SIEMA</h3>
+                            <div class="hov__heart__icon__container">
+                                <i class="far fa-heart open"></i>
+                                <i class="fas fa-heart closed"></i>
+                                <p>favorite</p>
+                            </div>
+                            <div class="buy__now__container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Buy Now!</p>
+                            </div>
+                            <div class="see__product">
+                                <i class="fas fa-search"></i>
+                                <p>Details</p>
+                            </div>
                         </div>
                     </div>
                     <div class="productFive allProducts">
                         <div class="hov">
-                            <h3>SIEMA</h3>
+                            <div class="hov__heart__icon__container">
+                                <i class="far fa-heart open"></i>
+                                <i class="fas fa-heart closed"></i>
+                                <p>favorite</p>
+                            </div>
+                            <div class="buy__now__container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Buy Now!</p>
+                            </div>
+                            <div class="see__product">
+                                <i class="fas fa-search"></i>
+                                <p>Details</p>
+                            </div>
                         </div>
                     </div>
                     <div class="productSix allProducts">
                         <div class="hov">
-                            <h3>SIEMA</h3>
+                            <div class="hov__heart__icon__container">
+                                <i class="far fa-heart open"></i>
+                                <i class="fas fa-heart closed"></i>
+                                <p>favorite</p>
+                            </div>
+                            <div class="buy__now__container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Buy Now!</p>
+                            </div>
+                            <div class="see__product">
+                                <i class="fas fa-search"></i>
+                                <p>Details</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="products__info2">
-                        <div class="price4 price">
+                    <div class="products__info2 infoAll">
+                        <div class="price1 price">
                             <h2>Shampoo</h2>
                             <p>16.99zł</p>
                         </div>
-                        <div class="price5 price">
+                        <div class="price2 price">
                             <h2>Shampoo</h2>
                             <p>16.99zł</p>
                         </div>
-                        <div class="price6 price">
+                        <div class="price3 price">
+                            <h2>Shampoo</h2>
+                            <p>16.99zł</p>
+                        </div>
+                    </div>
+                    <div class="productSeven allProducts">
+                        <div class="hov">
+                            <div class="hov__heart__icon__container">
+                                <i class="far fa-heart open"></i>
+                                <i class="fas fa-heart closed"></i>
+                                <p>favorite</p>
+                            </div>
+                            <div class="buy__now__container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Buy Now!</p>
+                            </div>
+                            <div class="see__product">
+                                <i class="fas fa-search"></i>
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productEight allProducts">
+                        <div class="hov">
+                            <div class="hov__heart__icon__container">
+                                <i class="far fa-heart open"></i>
+                                <i class="fas fa-heart closed"></i>
+                                <p>favorite</p>
+                            </div>
+                            <div class="buy__now__container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Buy Now!</p>
+                            </div>
+                            <div class="see__product">
+                                <i class="fas fa-search"></i>
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productNine allProducts">
+                        <div class="hov">
+                            <div class="hov__heart__icon__container">
+                                <i class="far fa-heart open"></i>
+                                <i class="fas fa-heart closed"></i>
+                                <p>favorite</p>
+                            </div>
+                            <div class="buy__now__container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Buy Now!</p>
+                            </div>
+                            <div class="see__product">
+                                <i class="fas fa-search"></i>
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products__info3 infoAll">
+                        <div class="price1 price">
+                            <h2>Shampoo</h2>
+                            <p>16.99zł</p>
+                        </div>
+                        <div class="price2 price">
+                            <h2>Shampoo</h2>
+                            <p>16.99zł</p>
+                        </div>
+                        <div class="price3 price">
                             <h2>Shampoo</h2>
                             <p>16.99zł</p>
                         </div>
@@ -183,13 +326,56 @@
         </div>
     </main>
     </div>
-    <div class="edge-space"></div>
+    <!-- Footer  -->
     <footer>
-        <div class="contact"></div>
-        <div class="social"></div>
-        <div class="faq"></div>
-        <div class="newsletter"></div>
-        <div class="copyrights"></div>
+        <div class="contact">
+            <div class="h2__wrapper">
+                <h2>Contact Us:</h2>
+            </div>
+            <div class="contact__description footer__descriptions">
+                <div class="description__align align__contact">
+                    <p>Loremicus street 28</p>
+                    <p>032-2776-232323</p>
+                    <p>cosmotics.shop@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="social">
+            <div class="h2__wrapper">
+                <h2>Social Media:</h2>
+            </div>
+            <div class="sm__description footer__descriptions">
+                <div class="description__align">
+                    <p>Facebook</p>
+                    <p>Instagram</p>
+                    <p>Twitter</p>
+                </div>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="h2__wrapper">
+                <h2>FAQ:</h2>
+            </div>
+            <div class="faq__description footer__descriptions">
+                <div class="description__align">
+                    <p>how to buy</p>
+                    <p>gift cards</p>
+                    <p>career</p>
+                </div>
+            </div>
+        </div>
+        <div class="newsletter">
+            <div class="h2__wrapper">
+                <h2>Newsletter:</h2>
+            </div>
+            <div class="newsletter__content">
+                <input type="text" placeholder="Email Adress">
+                <h3>-10% for first buy!</h3>
+            </div>
+            <div class="copyrights">
+                <h4>&copy Made by lorem all rights lorem</h4>
+            </div>
+        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

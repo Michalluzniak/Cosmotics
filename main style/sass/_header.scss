@@ -19,6 +19,62 @@ header {
 
     // margin-bottom: 10vh;
 
+    nav {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        grid-area: 1 / 1 / 2 / 4;
+        height: 10%;
+        width: 100%;
+
+        background-color: rgba(0, 0, 0, 0.2);
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            width: 100%;
+            height: 100%;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25%;
+
+                a {
+                    position: relative;
+                    display: inline-block;
+                    padding: 20px 30px;
+                    text-decoration: none;
+                    font-size: 1.8em;
+                    color: white;
+                    transition: .1s;
+
+                    &::after {
+                        // background: none repeat scroll 0 0 transparent;
+                        bottom: 15%;
+                        content: "";
+                        display: block;
+                        height: 1px;
+                        left: 50%;
+                        position: absolute;
+                        background: #fff;
+                        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                        width: 0;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                        left: 0;
+                    }
+
+
+                }
+            }
+        }
+    }
 
     h1 {
         display: inline-block;
@@ -50,42 +106,62 @@ header {
 
     div.toggle__menu {
         position: fixed;
-        top: 60px;
-        right: 60px;
-        height: 60px;
-        width: 60px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        top: 45px;
+        right: 40px;
+        height: 20px;
+        width: 30px;
         transform: translate(50%, -50%);
         // background-color: #fff;
         z-index: 100;
         cursor: pointer;
-    }
+        visibility: hidden;
 
-    i.fas-menu {
-        @include md-icon-size(60px);
-        text-align: center;
-        color: white;
-        text-shadow: -1.5px -1.5px 1px #000,
-            1.5px -1.5px 1px #000, -1.5px 1.5px 1px #000, 1.5px 1.5px 1px #000;
-    }
-
-    i.fa-times {
-        display: none;
-        font-size: 2rem;
-        text-shadow: -1px -1px 0px #000, 1px -1px 0px #000,
-            -1px 1px 0px #000, 1px 1px 0px #000;
-
-        &:hover {
-            transform: scale(1.1);
+        &.active {
+            visibility: visible;
         }
+
+        &.unactive {
+            transform: translate(100%, -50%);
+        }
+
+        span {
+            display: block;
+            height: 5%;
+            width: 100%;
+            background-color: #fff;
+            transition: .3s;
+
+            &:nth-child(2) {
+                position: absolute;
+                top: 100%;
+            }
+
+            &:nth-child(3) {
+                position: absolute;
+                top: 0%;
+            }
+        }
+
+        span:nth-child(1).active {
+            transform: rotate(-45deg);
+        }
+
+        span:nth-child(2).active {
+            top: 50%;
+            transform: rotate(45deg);
+        }
+
+        span:nth-child(3).active {
+            top: 50%;
+            transform: rotate(45deg);
+        }
+
+
     }
 
-    i.fa-times.active {
-        display: block;
-    }
-
-    i.fa-bars.active {
-        display: none;
-    }
 
 
 

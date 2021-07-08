@@ -1,15 +1,16 @@
 //DROPDOWN MENU 
 $(document).ready(function () {
     $('.nav-btn').click(function () {
-        // console.log('it works!')
         $(this).next('.sub-menu').slideToggle();
         $(this).find('.drop').toggleClass('rotate');
     });
 
+
+
+
     //logo and description animation
 
     $('.logo').textyle({
-
         easing: 'linear',
         duration: 2000,
         delay: 100
@@ -25,22 +26,29 @@ $(document).ready(function () {
 
 });
 
-// arrow button
+
+
+// arrow button , and burger menu button animation
 
 $('.scroll__arrow').hide(0).delay(2000).show(1000);
+// $('nav').hide(0).delay(2000).show(1000);
 
-//arrow button scroll
+//arrow button scroll to 
+$(".scroll__arrow").click(function () {
+    $('html,body').animate({
+            scrollTop: $(".description").offset().top
+        },
+        1000);
+});
 
-$('.scroll__arrow').click(function () {
-    // console.log('work');
-    $('html').animate({
-        scrollTop: $('header').height()
-    }, 1000);
-    return false;
-})
+
+
+
+
+
 
 // side menu 
-
+const nav = document.querySelector('nav');
 const menuIcon = document.querySelector('.fa-bars');
 const sideMenu = document.querySelector('.side__menu');
 const sideMenuBlur = document.querySelector('.side__menu__bg');
@@ -48,15 +56,25 @@ const timesIcon = document.querySelector('.fa-times');
 const icon = document.querySelector('.toggle__menu');
 const site = document.querySelector('body');
 const heading = document.querySelector('h1');
+
+let spanOne = document.querySelector('#hamFirstLine');
+let spanTwo = document.querySelector('#hamSecondLine');
+let spanThree = document.querySelector('#hamThirdLine');
+
 let isMenuOpen = false;
 
 icon.addEventListener('click', function () {
     sideMenu.classList.toggle('active');
     sideMenuBlur.classList.toggle('active');
     if (sideMenu.classList.contains('active')) {
-        // console.log('works');     
         isMenuOpen = true;
     }
+})
+
+icon.addEventListener('click', function () {
+    spanOne.classList.toggle('active');
+    spanTwo.classList.toggle('active');
+    spanThree.classList.toggle('active');
 })
 
 
@@ -64,28 +82,31 @@ window.addEventListener('scroll', function () {
     if (isMenuOpen) {
         sideMenu.classList.remove('active');
         sideMenuBlur.classList.remove('active');
-        menuIcon.classList.remove('active');
-        timesIcon.classList.remove('active');
-        // console.log('XD');
+        spanOne.classList.remove('active');
+        spanTwo.classList.remove('active');
+        spanThree.classList.remove('active');
         isMenuOpen = false;
     }
 })
-icon.addEventListener('click', function () {
-    menuIcon.classList.toggle('active');
-    timesIcon.classList.toggle('active');
-})
-
 sideMenuBlur.addEventListener('click', function () {
     sideMenu.classList.toggle('active');
     sideMenuBlur.classList.toggle('active');
-    menuIcon.classList.toggle('active');
-    timesIcon.classList.toggle('active');
-
+    spanOne.classList.remove('active');
+    spanTwo.classList.remove('active');
+    spanThree.classList.remove('active');
 
 })
 
+// BURGER MENU POP OUT AFTER 1 SCROLL 
 
-$(document).ready(function () {
-
-    console.log($('.sideMenuBlur').hasClass('active'));
+window.addEventListener('scroll', function () {
+    let scrollPosition = $(window).scrollTop();
+    let navHeight = nav.offsetHeight;
+    if (scrollPosition > navHeight) {
+        icon.classList.add('active');
+    } else {
+        icon.classList.remove('active');
+    }
 })
+
+console.log(nav.offsetHeight);
