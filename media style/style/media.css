@@ -133,132 +133,59 @@
   nav.products ul {
     position: absolute;
     top: 270vh;
-    width: 20%;
-    height: 100%;
-    border-right: 4px solid blue;
+    width: 100%;
+    height: 140%;
+    border-right: none;
+    background-color: #0B1326;
   }
   nav.products ul li {
-    position: relative;
-    width: 100%;
-    border-bottom: 4px solid white;
-    cursor: pointer;
+    border-bottom: 2px solid white;
   }
   nav.products ul li:first-of-type {
-    border-top: 4px solid white;
+    border-top: 2px solid white;
   }
   nav.products ul li div.sub-menu {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    height: 50%;
-    border-top: 4px solid white;
-    display: none;
+    border-top: 2px solid white;
   }
   nav.products ul li div.sub-menu a {
-    font-size: 1.2em;
-    width: 100%;
-    height: 25%;
-    background-color: #0B1326;
+    font-size: 1em;
   }
   nav.products ul li div.sub-menu a:hover {
     background-color: #6D6C5A;
   }
   nav.products ul li a {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100%;
-    width: 100%;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 310%;
   }
   nav.products ul li a:hover i {
-    font-size: 2.5rem;
+    font-size: 1rem;
   }
   nav.products ul li a i {
-    position: absolute;
-    left: 88%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    font-size: 2rem;
-    color: white;
-  }
-  nav.products ul li a i.rotate {
-    -webkit-transform: translate(-50%, -50%) rotate(180deg);
-            transform: translate(-50%, -50%) rotate(180deg);
+    font-size: 1rem;
   }
   nav.products ul div.search__container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 1fr 20% 20% 1fr;
+    -ms-grid-rows: 1fr 20% 1fr;
     -ms-grid-columns: 1fr 80% 1fr;
-        grid-template: 1fr 20% 20% 1fr / 1fr 80% 1fr;
-    height: 15%;
-    width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+        grid-template: 1fr 20% 1fr / 1fr 80% 1fr;
+    height: 10%;
   }
   nav.products ul div.search__container .searchbox {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-area: 3 / 2 / 4 / 3;
-    background-color: #fff;
-    height: 35px;
-    padding-left: 10px;
-  }
-  nav.products ul div.search__container .searchbox input.search-txt {
-    font-size: 1.1rem;
-    width: 100%;
-    border: none;
-    border-right: 2px solid #0B1326;
-    background: none;
-    outline: none;
-    width: 80%;
-    height: 100%;
-  }
-  nav.products ul div.search__container .searchbox a.search-btn {
-    display: block;
-    width: 20%;
-    height: 100%;
-    text-align: center;
-    background-color: #933F4F;
-  }
-  nav.products ul div.search__container .searchbox a.search-btn i {
-    line-height: 35px;
-    color: white;
-    font-size: 1.2rem;
-  }
-  nav.products ul div.search__container h2 {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-area: 2 / 2 / 3 / 3;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 10px;
-    font-weight: 300;
+    background-color: #fff;
+  }
+  nav.products ul div.search__container .searchbox input.search-txt {
+    font-size: 1rem;
+    border-right: 2px solid #0B1326;
+  }
+  nav.products ul div.search__container .searchbox a.search-btn i {
+    font-size: 1.1rem;
+  }
+  nav.products ul div.search__container h2 {
+    display: none;
   }
   div.products__container {
     width: 100%;
@@ -362,7 +289,10 @@
     padding: 0 3px 0 3px;
   }
   footer {
-    display: none;
+    position: absolute;
+    top: 400%;
+    left: 0;
+    z-index: 50;
   }
 }
 /*# sourceMappingURL=media.css.map */

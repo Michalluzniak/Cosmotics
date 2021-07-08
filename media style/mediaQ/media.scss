@@ -178,35 +178,23 @@ $secondaryPinkColor: #933F4F;
         ul {
             position: absolute;
             top: 270vh;
-            width: 20%;
-            height: 100%;
-            border-right: 4px solid blue;
+            width: 100%;
+            height: 140%;
+            border-right: none;
+            background-color: $primaryBlueColor;
 
             li {
-                position: relative;
-                width: 100%;
-                border-bottom: 4px solid white;
-                cursor: pointer;
+                border-bottom: 2px solid white;
 
                 &:first-of-type {
-                    border-top: 4px solid white;
+                    border-top: 2px solid white;
                 }
 
-
-
-
                 div.sub-menu {
-                    align-items: center;
-                    width: 100%;
-                    height: 50%;
-                    border-top: 4px solid white;
-                    display: none;
+                    border-top: 2px solid white;
 
                     a {
-                        font-size: 1.2em;
-                        width: 100%;
-                        height: 25%;
-                        background-color: $primaryBlueColor;
+                        font-size: 1em;
 
                         &:hover {
                             background-color: #6D6C5A;
@@ -215,88 +203,46 @@ $secondaryPinkColor: #933F4F;
                 }
 
                 a {
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100%;
-                    width: 100%;
-                    color: white;
-                    text-align: center;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    font-size: 2rem;
-                    //  vertical-align: middle;
+                    font-size: 1.5rem;
                     line-height: 310%;
 
                     &:hover i {
-                        font-size: 2.5rem;
+                        font-size: 1rem;
                     }
 
 
                     i {
-                        position: absolute;
-                        left: 88%;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                        font-size: 2rem;
-                        color: white;
+                        font-size: 1rem;
 
-                        &.rotate {
-                            transform: translate(-50%, -50%) rotate(180deg);
-                        }
                     }
                 }
             }
 
             div.search__container {
-                display: grid;
-                grid-template: 1fr 20% 20% 1fr / 1fr 80% 1fr;
-                height: 15%;
-                width: 100%;
-                align-items: center;
+                grid-template: 1fr 20% 1fr / 1fr 80% 1fr;
+                height: 10%;
+
 
                 .searchbox {
-                    display: flex;
-                    position: relative;
-                    grid-area: 3 / 2 / 4 / 3;
+                    grid-area: 2 / 2 / 3 / 3;
                     background-color: #fff;
-                    height: 35px;
-                    padding-left: 10px;
 
                     input.search-txt {
-                        font-size: 1.1rem;
-                        width: 100%;
-                        border: none;
+                        font-size: 1rem;
                         border-right: 2px solid $primaryBlueColor;
-                        background: none;
-                        outline: none;
-                        width: 80%;
-                        height: 100%
                     }
 
                     a.search-btn {
-                        display: block;
-                        width: 20%;
-                        height: 100%;
-                        text-align: center;
-                        background-color: $secondaryPinkColor;
+
 
                         i {
-                            line-height: 35px;
-                            color: white;
-                            font-size: 1.2rem;
+                            font-size: 1.1rem;
                         }
                     }
                 }
 
                 h2 {
-                    grid-area: 2 / 2 / 3 / 3;
-                    text-align: center;
-                    text-transform: uppercase;
-                    color: white;
-                    letter-spacing: 10px;
-                    font-weight: 300;
+                    display: none;
                 }
             }
         }
@@ -430,7 +376,10 @@ $secondaryPinkColor: #933F4F;
 
 
     footer {
-        display: none;
+        position: absolute;
+        top: 400%;
+        left: 0;
+        z-index: 50;
     }
 
 

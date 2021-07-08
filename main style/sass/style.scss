@@ -14,6 +14,7 @@
      font-family: 'Unica one';
  }
 
+
  ::-webkit-scrollbar {
      display: none;
  }
@@ -121,7 +122,6 @@
                  text-decoration: none;
                  text-transform: uppercase;
                  font-size: 2rem;
-                 //  vertical-align: middle;
                  line-height: 310%;
 
                  &:hover i {
@@ -161,7 +161,6 @@
 
                  input.search-txt {
                      font-size: 1.1rem;
-                     width: 100%;
                      border: none;
                      border-right: 2px solid $primaryBlueColor;
                      background: none;
