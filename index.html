@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main style/style/style.css">
     <link rel="stylesheet" href="media style/style/media.css">
+    <script src="mainscript.js" defer></script>
     <title>Cosmotics</title>
 </head>
 
@@ -121,268 +122,335 @@
             </ul>
             <!-- Products list -->
             <div class=" products__container">
-                <div class="products__list">
-                    <div class="type__of__products">
-                        <h2>top products</h2>
-                    </div>
-                    <div class="productOne allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
-                            </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
-                            </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="productTwo allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
-                            </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
-                            </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
+                <div class="type__of__products">
+                    <h2>top products</h2>
+                </div>
+                <div class="product-list-container">
+                    <div class="products__list">
+                        <div data-key="1" class="productOne allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="productThree allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
-                            </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
-                            </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products__info1 infoAll">
-                        <div class="price1 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
-                        </div>
-                        <div class="price2 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
-                        </div>
-                        <div class="price3 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
-                        </div>
-                    </div>
-                    <div class="productFour allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
-                            </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
-                            </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
+                        <div data-key="2" class="productTwo allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="productFive allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
+                        <div data-key="3" class="productThree allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
+                            </div> /*
+                        </div>
+                        <div class="products__info1 infoAll">
+                            <div data-key="1" class="price1 price">
+                                <h2>Shampoo</h2>
+                                <p>16.99zł</p>
                             </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
+                            <div data-key="2" class="price2 price">
+                                <h2>Face Cream</h2>
+                                <p>26.99zł</p>
                             </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
+                            <div data-key="3" class="price3 price">
+                                <h2>Beard Cream</h2>
+                                <p>42.99zł</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="productSix allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
-                            </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
-                            </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products__info2 infoAll">
-                        <div class="price1 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
-                        </div>
-                        <div class="price2 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
-                        </div>
-                        <div class="price3 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
-                        </div>
-                    </div>
-                    <div class="productSeven allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
-                            </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
-                            </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
+                        <div data-key="4" class="productFour allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="productEight allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
-                            </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
-                            </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="productNine allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
-                            </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
-                            </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
+                        <div data-key="5" class="productFive allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="products__info3 infoAll">
-                        <div class="price1 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
-                        </div>
-                        <div class="price2 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
-                        </div>
-                        <div class="price3 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
-                        </div>
-                    </div>
-                    <div class="productTen allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
-                            </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
-                            </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
+                        <div data-key="6" class="productSix allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="productEleven allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
+                        <div class="products__info2 infoAll">
+                            <div data-key="4" class="price1 price">
+                                <h2>Nivera</h2>
+                                <p>6.99zł</p>
                             </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
+                            <div data-key="5" class="price2 price">
+                                <h2>Shwark</h2>
+                                <p>39.99zł</p>
                             </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
+                            <div data-key="6" class="price3 price">
+                                <h2>Peeling</h2>
+                                <p>19.99zł</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="productTwelve allProducts">
-                        <div class="hov">
-                            <div class="hov__heart__icon__container">
-                                <i class="far fa-heart open"></i>
-                                <i class="fas fa-heart closed"></i>
-                                <p>favorite</p>
-                            </div>
-                            <div class="buy__now__container">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Buy Now!</p>
-                            </div>
-                            <div class="see__product">
-                                <i class="fas fa-search"></i>
-                                <p>Details</p>
+                        <div data-key="7" class="productSeven allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="products__info4 infoAll">
-                        <div class="price1 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
+                        <div data-key="8" class="productEight allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="price2 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
+                        <div data-key="9" class="productNine allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="price3 price">
-                            <h2>Shampoo</h2>
-                            <p>16.99zł</p>
+                        <div class="products__info3 infoAll">
+                            <div data-key="7" class="price1 price">
+                                <h2>Shampoo</h2>
+                                <p>16.99zł</p>
+                            </div>
+                            <div data-key="8" class="price2 price">
+                                <h2>Shampoo</h2>
+                                <p>16.99zł</p>
+                            </div>
+                            <div data-key="9" class="price3 price">
+                                <h2>Shampoo</h2>
+                                <p>16.99zł</p>
+                            </div>
+                        </div>
+                        <div data-key="10" class="productTen allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-key="11" class="productEleven allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-key="12" class="productTwelve allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__info4 infoAll">
+                            <div data-key="10" class="price1 price">
+                                <h2>Shampoo</h2>
+                                <p>16.99zł</p>
+                            </div>
+                            <div data-key="11" class="price2 price">
+                                <h2>Shampoo</h2>
+                                <p>16.99zł</p>
+                            </div>
+                            <div data-key="12" class="price3 price">
+                                <h2>Shampoo</h2>
+                                <p>16.99zł</p>
+                            </div>
+                        </div>
+                        <div data-key="13" class="product13 allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-key="14" class="product14 allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-key="15" class="product15 allProducts">
+                            <div class="hov">
+                                <div class="hov__heart__icon__container">
+                                    <i class="far fa-heart open"></i>
+                                    <i class="fas fa-heart closed"></i>
+                                    <p>favorite</p>
+                                </div>
+                                <div class="buy__now__container">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Buy Now!!</p>
+                                </div>
+                                <div class="see__product">
+                                    <i class="fas fa-search"></i>
+                                    <p>Details</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__info5 infoAll">
+                            <div data-key="13" class="price1 price">
+                                <h2>Shampoo</h2>
+                                <p>16.99zł</p>
+                            </div>
+                            <div data-key="14" class="price2 price">
+                                <h2>Shampoo</h2>
+                                <p>16.99zł</p>
+                            </div>
+                            <div data-key="15" class="price3 price">
+                                <h2>Shampoo</h2>
+                                <p>16.99zł</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -445,7 +513,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="textyle.js"></script>
-    <script src="mainscript.js"></script>
 </body>
 
 </html>

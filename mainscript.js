@@ -109,4 +109,59 @@ window.addEventListener('scroll', function () {
     }
 })
 
-console.log(nav.offsetHeight);
+// console.log(nav.offsetHeight);
+console.log(window.scrollY)
+
+// scroll activate after 100vh 
+
+const productListContainer = document.querySelector('.product-list-container')
+const header = document.querySelector('header')
+
+document.addEventListener('scroll', () => {
+    if (window.scrollY >= header.offsetHeight) {
+        productListContainer.classList.add('active-scroll');
+        // console.log('ok')
+    } else {
+        productListContainer.classList.remove('active-scroll')
+    }
+})
+
+
+// search products
+
+const input = document.querySelector('.search-txt');
+const itemsList = document.querySelectorAll('.price')
+const info = document.querySelectorAll('.infoAll')
+const productList = document.querySelector('.products__list')
+const pictures = document.querySelectorAll('.allProducts')
+
+const searchItems = (e) => {
+    let searchingValue = e.target.value.toLowerCase();
+    let itemsArray = [...itemsList];
+    let picturesArray = [...pictures];
+    let infoArray = [...info];
+    productList.textContent = "";
+    let afterHelp = itemsArray.filter(div => div.textContent.toLowerCase().includes(searchingValue)).map(div => div.dataset.key);
+
+    afterHelp.forEach((key, index) => {
+        let picture = picturesArray.find(div => div.dataset.key === key)
+        picture.style.gridArea = `image${index + 1}`
+        let price = itemsArray.find(div => div.dataset.key === key)
+        let infoItem = infoArray.find(div => div.classList.contains('products__info' + Math.ceil((index + 1) / 3)))
+        price.className = "";
+        price.classList.add('price');
+        price.classList.add(`price${(index%3) + 1}`);
+
+
+
+        if (!productList.contains(infoItem)) {
+            infoItem.textContent = "";
+            productList.append(infoItem);
+        }
+        infoItem.append(price);
+        // console.log(itemListBar)
+        productList.append(picture);
+    })
+
+}
+input.addEventListener('input', searchItems)
